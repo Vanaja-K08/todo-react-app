@@ -1,6 +1,6 @@
 import ToDoItem from "./ToDoItem";
 
-function ToDoList({todos,onEdit}){
+function ToDoList({todos,onEdit,onDelete,onToggle}){
 
     if(todos.length === 0){
         return(
@@ -13,6 +13,8 @@ return (
         <ToDoItem
           todo={todo}
           onEdit={onEdit}
+          onDelete={onDelete}
+          onToggle={onToggle}
         />
       ))}
     </ul>

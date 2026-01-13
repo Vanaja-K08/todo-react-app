@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ToDoItem({ todo ,onEdit}) {
+function ToDoItem({ todo ,onEdit,onDelete,onToggle}) {
 
     const [editMode, setEditMode] = useState(false);
     const [text, setText] = useState(todo.text);
@@ -46,7 +46,7 @@ function ToDoItem({ todo ,onEdit}) {
                 )}
 
                 <button
-                    className="btn btn-danger btn-sm"
+                    className="btn btn-danger btn-sm"  onClick={() => onDelete(todo.id)}
                 >
                     Delete
                 </button>

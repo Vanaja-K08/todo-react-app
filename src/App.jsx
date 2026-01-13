@@ -39,6 +39,20 @@ function App() {
         todo.id === id ? { ...todo, text: newText } : todo
       )
     );
+  };// Delete Todo
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  // Mark Completed
+  const toggleTodo = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id
+          ? { ...todo, completed: !todo.completed }
+          : todo
+      )
+    );
   };
 
   return (
@@ -52,7 +66,7 @@ function App() {
           value={task}
           onChange={(e) => setTask(e.target.value)}
         />
-        <button className="btn btn-primary" onClick={addTodo}>
+        <button className="btn btn-secondary" onClick={addTodo}>
           Add
         </button>
       </div>
@@ -62,6 +76,8 @@ function App() {
       <ToDoList
         todos={todos}
          onEdit={editTodo}
+          onDelete={deleteTodo}
+        onToggle={toggleTodo}
       />
     </div>
   );
