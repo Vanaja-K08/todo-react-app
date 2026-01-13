@@ -1,16 +1,49 @@
-# React + Vite
+Git URL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://github.com/Vanaja-K08/todo-react-app
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 📝 To-Do List Application (React)
 
-## React Compiler
+A simple and user-friendly **To-Do List application** built using **React functional components**.  
+This app allows users to **add, edit, delete, and mark tasks as completed**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ➕ Add new to-do items
+- ✅ Mark tasks as completed
+- ✏️ Edit existing tasks
+- ❌ Delete tasks
+- ⚛️ Built using React Functional Components
+- 🎯 Uses `useState` for state management
+- 🔄 Uses props for component communication
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 Components Structure
+
+- **App** – Main component that manages state
+- **Header** – Displays application title
+- **ToDoList** – Handles input and renders list
+- **ToDoItem** – Displays individual task with actions
+
+## 🛠️ Technologies Used
+
+- React
+- JavaScript (ES6)
+- HTML5
+- CSS3
+
+1. Navigate to the project folder:
+cd todo-list-app
+
+2. Install dependencies:
+
+npm install
+
+3.Start the application:
+
+npm start
+
+4. Open browser and visit:
+
+http://localhost:3000
+
