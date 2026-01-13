@@ -1,9 +1,15 @@
 import { useState } from "react";
 
-function ToDoItem({ todo }) {
+function ToDoItem({ todo ,onEdit}) {
 
     const [editMode, setEditMode] = useState(false);
     const [text, setText] = useState(todo.text);
+
+      const saveEdit = () => {
+    onEdit(todo.id, text);
+    setEditMode(false);
+  };
+
     return (
         <li className="list-group-item d-flex justify-content-between align-items-center">
             {editMode ? (
@@ -27,12 +33,13 @@ function ToDoItem({ todo }) {
 
             <div>
                 {editMode ? (
-                    <button className="btn btn-success btn-sm me-2" >
+                    <button className="btn btn-success btn-sm me-2" onClick={saveEdit}>
                         Save
                     </button>
                 ) : (
                     <button
                         className="btn btn-warning btn-sm me-2"
+                        onClick={() => setEditMode(true)}
                     >
                         Edit
                     </button>

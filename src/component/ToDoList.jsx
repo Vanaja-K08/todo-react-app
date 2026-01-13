@@ -1,6 +1,6 @@
 import ToDoItem from "./ToDoItem";
 
-function ToDoList({todos}){
+function ToDoList({todos,onEdit}){
 
     if(todos.length === 0){
         return(
@@ -12,6 +12,7 @@ return (
       {todos.map((todo) => (
         <ToDoItem
           todo={todo}
+          onEdit={onEdit}
         />
       ))}
     </ul>

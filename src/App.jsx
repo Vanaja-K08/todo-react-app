@@ -26,6 +26,21 @@ function App() {
     setTask("");
     setError("");
   };
+
+  // Edit Todo with validation
+  const editTodo = (id, newText) => {
+    if (newText.trim() === "") {
+      alert("Edited task cannot be empty!");
+      return;
+    }
+
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, text: newText } : todo
+      )
+    );
+  };
+
   return (
     <div className="container mt-5 bg-primar">
       <Header />
@@ -46,6 +61,7 @@ function App() {
 
       <ToDoList
         todos={todos}
+         onEdit={editTodo}
       />
     </div>
   );
